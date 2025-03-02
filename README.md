@@ -49,6 +49,8 @@ Do NOT make any changes on parts that run high voltages. Always check the compon
 ### Programming the Controller
 
 
+[esp8266.ino](/esp8266.ino)
+
 
 
 ### Home Assistant Setup
