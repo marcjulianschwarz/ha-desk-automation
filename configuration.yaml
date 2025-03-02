@@ -1,0 +1,7 @@
+mqtt:
+  switch:
+    - name: "Desk Switch"
+      unique_id: desk_switch
+      command_topic: "desk"
+      payload_on: "up"
+      payload_off: "down"
