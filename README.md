@@ -92,3 +92,20 @@ mqtt:
 ```
 
 After restarting Home Assistant, this will add a new switch device which sends `up` and `down` payloads to the `desk` MQTT topic.
+
+## Optional Raycast Integration
+
+This repository includes [two python files](/raycast-scripts/) that can be included in a [script commands directory](https://github.com/raycast/script-commands) for [Raycast](https://www.raycast.com/). They will add the commands `⬆️ Raise Desk` and `⬇️ Lower Desk`.
+
+![Screenshot of Raycast Script Commands in Raycast Search](/docs/media/raycast.png)
+
+### Install
+
+To use the scripts, install the MQTT python client.
+
+```bash
+pip install paho-mqtt
+```
+
+Then change the shebang line to point to the python environment where you installed the client, set MQTT broker hostname, user, password and add both python scripts to your script commands directory.
+You should now be able to raise and lower your desk from Raycast 🎉.
