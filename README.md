@@ -78,3 +78,17 @@ Open [esp8266.ino](/esp8266.ino) in the Arduino IDE and set all configuration va
 - Here you can try publishing packets to the `desk` topic. Set your payload to `down` or `up`.
 
 #### 3. Add Switch in Home Assistant Configuration
+
+Use the Text Editor add-on to edit the `configuration.yaml` file of you Home Assistant instance. Add the following entry to the file.
+
+```yaml
+mqtt:
+  switch:
+    - name: "Desk Switch"
+      unique_id: desk_switch
+      command_topic: "desk"
+      payload_on: "up"
+      payload_off: "down"
+```
+
+After restarting Home Assistant, this will add a new switch device which sends `up` and `down` payloads to the `desk` MQTT topic.
